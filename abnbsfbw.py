@@ -1,7 +1,6 @@
 
 import pandas as pd
 import numpy as np
-# from app02 import predict
 
 abnb = pd.read_csv('AbnbSF_clean.csv')
 print(abnb.shape)
@@ -66,8 +65,8 @@ X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=
 print(X_train.shape, y_train.shape,  X_test.shape, y_test.shape)
 
 
-from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import StandardScaler
+# from sklearn.impute import SimpleImputer
+# from sklearn.preprocessing import StandardScaler
 from scipy.stats import randint, uniform
 
 import xgboost as xgb
@@ -115,7 +114,6 @@ def predict1(Accommodates,	Bedrooms,	Bathrooms,	Beds,	Minimum_Nights,	Maximum_Ni
     result = f'is ${pred:,.0f} \n'
     print(result)
 
-    # print(type(pred))
     return pred
 
 
@@ -141,7 +139,3 @@ print("Maximum_Nights =", Maximum_Nights)
 print("Guests_Included =", Guests_Included)
 
 pred = predict1(Accommodates, Bathrooms, Bedrooms, Beds, Minimum_Nights , Maximum_Nights, Guests_Included)
-
-
-
-
